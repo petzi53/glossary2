@@ -27,6 +27,16 @@ test_that("exists", {
   exp <- "<a class='glossary' title='Not ancient'>new</a>"
   expect_equal(test, exp)
 
+  # adding a term whose letters appear as substring in another term's name
+  # e.g. "api" is a substring of "capital income" and "shapiro-wilk test"
+  glossary_add("Capital income", "Income from capital assets")
+  glossary_add("Shapiro-Wilk test", "A normality test")
+  expect_no_error( glossary_add("API", "Application Programming Interface") )
+
+  # adding a term that is a prefix of an existing term
+  glossary_add("replication crisis", "Many studies fail to replicate")
+  expect_no_error( glossary_add("replication", "Repeating a study") )
+
   # markdown
   definition <- "This is a paragraph with a [link](https://url.com).
 

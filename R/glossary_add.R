@@ -30,7 +30,7 @@ glossary_add <- function(term,
     stop("The file ", path, " does not exist")
   }
   gloss <- yaml::read_yaml(path)
-  index <- grep(term, names(gloss), ignore.case = TRUE)
+  index <- which(trimws(tolower(names(gloss))) == trimws(tolower(term)))
 
   # term exists and not set to replace
   if (length(index) & !replace) {

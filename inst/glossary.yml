@@ -4,6 +4,15 @@ alpha: |
 alpha (graphics): |
   A value between 0 and 1 used to control the levels of transparency in a plot
 
+API: |
+  An API (Application Programming Interface) is a set of rules, protocols, and tools that allows different software applications to communicate with each other.
+
+Shapiro-Wilk test: |
+  The Shapiro-Wilk test is a statistical hypothesis test used to determine whether a sample of data comes from a normally distributed population.
+
+Capital income: |
+  Capital income is earnings generated from owning or investing assets, distinct from labor income derived from work.
+
 p-value: |
   The probability of the observed data, or more extreme data, if the null hypothesis is true. The lower the p-value, the higher the test statistic, and less likely it is to observe the data if the null hypothesis is true.
 
@@ -24,3 +33,9 @@ html: |
 
   * Item 1
   * List 2
+
+Reproducibility: |
+  Reproducibility is the ability to obtain consistent results by re-running an analysis using the original data, code, and methods provided by the initial researchers.
+
+Reproducibility Crisis: |
+  The reproducibility crisis refers to the growing concern that many scientific findings, particularly in fields like psychology, medicine, and social sciences, cannot be reliably replicated by other researchers.
