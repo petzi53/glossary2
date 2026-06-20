@@ -40,7 +40,7 @@ glossary <- function(term,
   if (!is.character(term)) stop("The term must be a character string")
   force(display) # needs to be used before the term is changed
   show <- match.arg(show)
-  popup <- match.arg(popup, c("click", "hover", "none"))
+  popup <- match.arg(popup, c("hover", "click", "none"))
   href <- ""
 
   # look up definition from file
