@@ -5,30 +5,33 @@
 
 <!-- badges: start -->
 
-[![Codecov test
-coverage](https://codecov.io/gh/petzi53/glossary2/branch/main/graph/badge.svg)](https://app.codecov.io/gh/petzi53/glossary2?branch=main)
 <!-- badges: end -->
 
-A maintained fork of the excellent [glossary](https://github.com/debruine/glossary) 
-package by [Lisa DeBruine](https://github.com/debruine).
+A maintained fork of the excellent
+[glossary](https://github.com/debruine/glossary) package by [Lisa
+DeBruine](https://github.com/debruine).
 
 ## About This Fork
 
-The original `glossary` package is no longer actively maintained by Lisa DeBruine 
-(no updates since 2023). This fork maintains the package with:
+The original `glossary` package is no longer actively maintained by Lisa
+DeBruine (no updates since 2023). This fork maintains the package with:
 
-- **Critical bugfix:** Exact case-insensitive term matching (fixes substring-matching bugs 
-  where "API" would incorrectly match "Capital income")
-- **Enhanced functionality:** Improved term lookup and edge case handling
+- **Critical bugfix:** Exact case-insensitive term matching (fixes
+  substring-matching bugs where “API” would incorrectly match “Capital
+  income”)
+- **Enhanced functionality:** Improved term lookup and edge case
+  handling
 - **Community support:** Best-effort maintenance and issue responses
 
-**Attribution:** This is a fork of Lisa DeBruine's work. The original package remains 
-licensed under CC BY 4.0, and DeBruine is credited as the original author in all distributions.
+**Attribution:** This is a fork of Lisa DeBruine’s work. The original
+package remains licensed under CC BY 4.0, and DeBruine is credited as
+the original author in all distributions.
 
-**Maintenance note:** This is a community fork maintained on a best-effort basis. While 
-issues and PRs are welcome, response times may vary due to time constraints. If you need 
-urgent support or want to contribute significantly, please consider the original repository 
-or reach out via issues.
+**Maintenance note:** This is a community fork maintained on a
+best-effort basis. While issues and PRs are welcome, response times may
+vary due to time constraints. If you need urgent support or want to
+contribute significantly, please consider the original repository or
+reach out via issues.
 
 ## What is glossary?
 
@@ -53,7 +56,7 @@ devtools::install_github("petzi53/glossary2")
 Click on the terms to see a popup definition.
 
 ``` r
-library(glossary) 
+library(glossary2) 
 glossary_path("inst/glossary.yml")
 glossary_style("purple", "underline")
 ```
@@ -65,8 +68,7 @@ a.glossary {
   cursor: help;
   position: relative;
 }
-
-/* only needed for popup = "click" */
+&#10;/* only needed for popup = "click" */
 /* popup-definition */
 a.glossary .def {
   display: none;
@@ -105,35 +107,50 @@ significance.</span></a>, you need to know the intended sample size,
 expected <a class='glossary'>effect size<span class="def">‘quantitative
 reflection of the magnitude of some phenomenon that is used for the
 purpose of addressing a question of interest’ (Kelley & Preacher,
-2012)</span></a> (e.g., <a class='glossary'>SESOI<span
-class="def">Smallest Effect Size of Interest: the smallest effect that
-is theoretically or practically meaningful \| See Equivalence Testing
-for Psychological Research for a tutorial on methods for choosing an
-SESOI.</span></a>), and <a class='glossary'>alpha<span class="def">The
-threshold chosen in Neyman-Pearson hypothesis testing to distinguish
-test results that lead to the decision to reject the null hypothesis, or
-not, based on the desired upper bound of the Type 1 error rate. An alpha
-level of 5% is most commonly used, but other alpha levels can be used as
-long as they are determined and preregistered by the researcher before
-the data is analyzed.</span></a> criterion.
+2012)</span></a> (e.g.,
+<a class='glossary'>SESOI<span class="def">Smallest Effect Size of
+Interest: the smallest effect that is theoretically or practically
+meaningful \| See Equivalence Testing for Psychological Research for a
+tutorial on methods for choosing an SESOI.</span></a>), and
+<a class='glossary'>alpha<span class="def">The threshold chosen in
+Neyman-Pearson hypothesis testing to distinguish test results that lead
+to the decision to reject the null hypothesis, or not, based on the
+desired upper bound of the Type 1 error rate. An alpha level of 5% is
+most commonly used, but other alpha levels can be used as long as they
+are determined and preregistered by the researcher before the data is
+analyzed.</span></a> criterion.
 
 <table class="table" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;">
+
 term
 </th>
+
 <th style="text-align:left;">
+
 definition
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 alpha
 </td>
+
 <td style="text-align:left;">
+
 The threshold chosen in Neyman-Pearson hypothesis testing to distinguish
 test results that lead to the decision to reject the null hypothesis, or
 not, based on the desired upper bound of the Type 1 error rate. An alpha
@@ -141,31 +158,48 @@ level of 5% is most commonly used, but other alpha levels can be used as
 long as they are determined and preregistered by the researcher before
 the data is analyzed.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 effect size
 </td>
+
 <td style="text-align:left;">
+
 ‘quantitative reflection of the magnitude of some phenomenon that is
 used for the purpose of addressing a question of interest’ (Kelley &
 Preacher, 2012)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 power
 </td>
+
 <td style="text-align:left;">
+
 The probability of rejecting the null hypothesis when it is false, for a
 specific analysis, effect size, sample size, and criteria for
 significance.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 SESOI
 </td>
+
 <td style="text-align:left;">
 
 Smallest Effect Size of Interest: the smallest effect that is
@@ -175,10 +209,12 @@ See [Equivalence Testing for Psychological
 Research](https://doi.org/10.1177/2515245918770963) for a tutorial on
 methods for choosing an SESOI.
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
-See [getting
-started](https://debruine.github.io/glossary/articles/glossary.html) for
+See the `vignette("glossary")` or [FORK_NOTES.md](FORK_NOTES.md) for
 more details.

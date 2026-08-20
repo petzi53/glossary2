@@ -2,7 +2,8 @@ Package: glossary2
 Title: Glossaries for Markdown and Quarto Documents (Community-Maintained Fork)
 Date: 2026-08-20
 Version: 1.0.1
-Authors@R: c(person("Lisa", "DeBruine", role = c("aut", "cph"), email = "debruine@glasgow.ac.uk", comment = c(ORCID = "0000-0002-7523-5539")), person("Peter", "Baumgartner", role = c("ctb", "cre"), email = "peter.baumgartner@uni-graz.at"))
+Authors@R: c(person("Lisa", "DeBruine", role = c("aut", "cph"), email = "debruine@glasgow.ac.uk", comment = c(ORCID = "0000-0002-7523-5539")), person("Peter", "Baumgartner", role = c("ctb", "cre"), email = "petzi53@gmail.com"),
+                comment = c(ORCID = "0000-0003-4526-8791"))
 Description: Add glossaries to markdown and quarto documents by tagging individual
     words. Definitions can be provided inline or in a separate file. This is a
     community-maintained fork of the original glossary package with bug fixes and

@@ -91,7 +91,7 @@ If you have questions or suggestions:
 - **PR feedback:** Feel free to submit PRs; expect best-effort review within 2–4 weeks
 
 If the original `glossary` maintainer (Lisa DeBruine) expresses interest in re-engaging with the 
-package, I'm open to collaboration or handing back maintenance.
+package, I'm open to collaboration or (preferably) handing back maintenance.
 
 ---
 
