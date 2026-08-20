@@ -39,7 +39,7 @@ add_to_quarto <- function(quarto_dir = ".",
 
   # add or update helper files
   if (!file.exists(gpath)) {
-    yml <- system.file("glossary.yml", package = "glossary")
+    yml <- system.file("glossary.yml", package = "glossary2")
     file.copy(yml, gpath)
   }
 
@@ -71,7 +71,7 @@ format:
   if (!isFALSE(script_path)) {
     script_text <- paste0(
       "# glossary setup - persistent across chapters\n",
-      "library(glossary)\n",
+      "library(glossary2)\n",
       "glossary_path(\"", glossary_path, "\")\n",
       "glossary_persistent(TRUE)\n"
     )

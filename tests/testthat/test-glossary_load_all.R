@@ -1,4 +1,4 @@
-path <- system.file("glossary.yml", package = "glossary")
+path <- system.file("glossary.yml", package = "glossary2")
 
 test_that("exists, default", {
   expect_type(glossary_load_all, "closure")
@@ -7,8 +7,10 @@ test_that("exists, default", {
 
   glossary_load_all()
   tbl <- glossary_options("table")
-  expect_equal(names(tbl), c("alpha", "alpha (graphics)", "p-value",
-                             "effect size", "power", "SESOI", "html"))
+  expect_equal(names(tbl), c("alpha", "alpha (graphics)", "API",
+                             "Shapiro-Wilk test", "Capital income",
+                             "p-value", "effect size", "power", "SESOI",
+                             "html", "Reproducibility", "Reproducibility Crisis"))
 })
 
 test_that("specify path", {
@@ -19,13 +21,15 @@ test_that("specify path", {
   expect_error(glossary_load_all("x"), "The file x does not exist")
   glossary_load_all(path)
   tbl <- glossary_options("table")
-  expect_equal(names(tbl), c("alpha", "alpha (graphics)", "p-value",
-                             "effect size", "power", "SESOI", "html"))
+  expect_equal(names(tbl), c("alpha", "alpha (graphics)", "API",
+                             "Shapiro-Wilk test", "Capital income",
+                             "p-value", "effect size", "power", "SESOI",
+                             "html", "Reproducibility", "Reproducibility Crisis"))
 })
 
 test_that("pre-existing definition", {
   glossary_reset()
-  path <- system.file("glossary.yml", package = "glossary")
+  path <- system.file("glossary.yml", package = "glossary2")
   glossary_path(path)
   sink <- glossary("power", def = "TESTING")
 

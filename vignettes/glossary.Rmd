@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 ## Setup
 
 ```{r setup}
-library(glossary)
+library(glossary2)
 ```
 
 
@@ -162,7 +162,7 @@ add_to_quarto(quarto_dir = "~/mybook",
 If you don't use the .Rprofile and _setup.R script method, you will need to start each chapter with a setup chunk that sets the appropriate defaults for your project.
 
 ```{r, eval = FALSE}
-library(glossary)
+library(glossary2)
 glossary_path("my_glossary.yml")
 glossary_persistent(TRUE)
 ```

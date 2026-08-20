@@ -22,7 +22,7 @@
 #'
 #' @examples
 #' # set glossary path to example file
-#' path <- system.file("glossary.yml", package = "glossary")
+#' path <- system.file("glossary.yml", package = "glossary2")
 #' glossary_path(path)
 #'
 #' glossary("alpha")

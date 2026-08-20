@@ -21,7 +21,7 @@ test_that("exists", {
   expect_equal(test, 2)
 
   setup_txt <- readLines(file.path(quarto_dir, "_setup.R"))
-  test <- grep("library(glossary)", setup_txt, fixed = TRUE)
+  test <- grep("library(glossary2)", setup_txt, fixed = TRUE)
   expect_equal(test, 2)
 
   # check on already set up project
@@ -35,6 +35,6 @@ test_that("exists", {
   expect_equal(test, 2)
 
   setup_txt <- readLines(file.path(quarto_dir, "_setup.R"))
-  test <- grep("library(glossary)", setup_txt, fixed = TRUE)
+  test <- grep("library(glossary2)", setup_txt, fixed = TRUE)
   expect_equal(test, 2)
 })

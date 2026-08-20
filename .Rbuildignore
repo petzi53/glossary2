@@ -10,3 +10,5 @@
 ^CRAN-SUBMISSION$
 ^codecov\.yml$
 ^\.zenodo\.json$
+\AGENTS.md$
+^\.posit/assistant$

@@ -1,17 +1,36 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# glossary <a href="https://debruine.github.io/glossary/"><img src="man/figures/logo.png" align="right" height="120" /></a>
+# glossary2: Community-Maintained Fork <a href="https://github.com/petzi53/glossary2"><img src="man/figures/logo.png" align="right" height="120" /></a>
 
 <!-- badges: start -->
 
-[![DOI](https://zenodo.org/badge/642849670.svg)](https://zenodo.org/badge/latestdoi/642849670)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/glossary)](https://CRAN.R-project.org/package=glossary)
-![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/glossary)
 [![Codecov test
-coverage](https://codecov.io/gh/debruine/glossary/branch/master/graph/badge.svg)](https://app.codecov.io/gh/debruine/glossary?branch=master)
+coverage](https://codecov.io/gh/petzi53/glossary2/branch/main/graph/badge.svg)](https://app.codecov.io/gh/petzi53/glossary2?branch=main)
 <!-- badges: end -->
+
+A maintained fork of the excellent [glossary](https://github.com/debruine/glossary) 
+package by [Lisa DeBruine](https://github.com/debruine).
+
+## About This Fork
+
+The original `glossary` package is no longer actively maintained by Lisa DeBruine 
+(no updates since 2023). This fork maintains the package with:
+
+- **Critical bugfix:** Exact case-insensitive term matching (fixes substring-matching bugs 
+  where "API" would incorrectly match "Capital income")
+- **Enhanced functionality:** Improved term lookup and edge case handling
+- **Community support:** Best-effort maintenance and issue responses
+
+**Attribution:** This is a fork of Lisa DeBruine's work. The original package remains 
+licensed under CC BY 4.0, and DeBruine is credited as the original author in all distributions.
+
+**Maintenance note:** This is a community fork maintained on a best-effort basis. While 
+issues and PRs are welcome, response times may vary due to time constraints. If you need 
+urgent support or want to contribute significantly, please consider the original repository 
+or reach out via issues.
+
+## What is glossary?
 
 There is a lot of necessary jargon to learn for coding. The goal of
 glossary is to provide a lightweight solution for making glossaries in
@@ -22,18 +41,11 @@ terms at the end of a section.
 
 ## Installation
 
-You can install glossary from CRAN with:
-
-``` r
-install.packages("glossary")
-```
-
-You can install the development version of glossary from
-[GitHub](https://github.com/) with:
+You can install glossary2 from GitHub with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("debruine/glossary")
+devtools::install_github("petzi53/glossary2")
 ```
 
 ## Example
