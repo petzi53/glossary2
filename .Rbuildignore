@@ -10,3 +10,8 @@
 ^CRAN-SUBMISSION$
 ^codecov\.yml$
 ^\.zenodo\.json$
+^AGENTS\.md$
+^\.posit/assistant$
+^FORK_NOTES\.md$
+^RELEASE_NOTES\.md$
+^README\.html$

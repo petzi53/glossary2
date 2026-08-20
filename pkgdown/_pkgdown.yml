@@ -1,0 +1,76 @@
+url: https://petzi53.github.io/glossary2
+title: glossary2
+description: >
+  Glossaries for Markdown and Quarto Documents (Community-Maintained Fork).
+  Add glossaries to markdown and quarto documents by tagging individual terms
+  with popup or linked definitions.
+
+template:
+  bootstrap: 5
+  
+home:
+  title: glossary2 — Glossaries for Quarto & Markdown
+  description: A community-maintained fork with bug fixes and enhancements
+
+reference:
+  - title: "Main Functions"
+    desc: >
+      Core functions for adding glossaries to documents
+    contents:
+      - glossary
+      - glossary_add
+      - glossary_table
+      - glossary_load_all
+  
+  - title: "Styling & Configuration"
+    desc: >
+      Control appearance and behavior of glossary terms
+    contents:
+      - glossary_style
+      - glossary_options
+      - glossary_reset
+      - glossary_popup
+      - glossary_persistent
+      - glossary_path
+  
+  - title: "Quarto Integration"
+    desc: >
+      Set up persistent glossaries in Quarto documents
+    contents:
+      - add_to_quarto
+
+navbar:
+  title: glossary2
+  bg: light
+  type: light
+  
+  left:
+    - text: Home
+      href: index.html
+    - text: Reference
+      href: reference/index.html
+    - text: Articles
+      href: articles/index.html
+    - text: "Fork Notes"
+      href: "https://github.com/petzi53/glossary2/blob/main/FORK_NOTES.md"
+  
+  right:
+    - icon: fa-github
+      href: https://github.com/petzi53/glossary2
+      aria-label: GitHub
+    - icon: fa-book
+      href: https://github.com/debruine/glossary
+      aria-label: Original glossary package
+
+articles:
+  - title: "Getting Started"
+    navbar: ~
+    contents:
+      - glossary
+
+footer:
+  structure:
+    left: developed_by
+    right: built_with
+  components:
+    developed_by: "Developed by Peter Baumgartner (fork of glossary by Lisa DeBruine)"

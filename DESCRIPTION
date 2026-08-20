@@ -1,20 +1,22 @@
-Package: glossary
-Title: Glossaries for Markdown and Quarto Documents
-Date: 2023-11-06
-Version: 1.0.0.9003
+Package: glossary2
+Title: Glossaries for Markdown and Quarto Documents (Community-Maintained Fork)
+Date: 2026-08-20
+Version: 1.0.1
 Authors@R: c(
-    person(
-        given = "Lisa", 
-        family = "DeBruine", 
-        role = c("aut", "cre", "cph"), 
-        email = "debruine@gmail.com", 
-        comment = c(ORCID = "0000-0002-7523-5539")
-    ))
-Description: Add glossaries to markdown and quarto documents by tagging individual words. Definitions can be provided inline or in a separate file.
+    person("Lisa", "DeBruine", role = c("aut", "cph"), 
+           email = "debruine@glasgow.ac.uk", 
+           comment = c(ORCID = "0000-0002-7523-5539")),
+    person("Peter", "Baumgartner", role = c("ctb", "cre"), 
+           email = "petzi53@gmail.com",
+           comment = c(ORCID = "0000-0003-4526-8791"))
+    )
+Description: Add glossaries to markdown and quarto documents by tagging individual
+    words. Definitions can be provided inline or in a separate file. This is a
+    community-maintained fork of the original glossary package with bug fixes and
+    enhancements.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
 Imports: 
     kableExtra,
     knitr,
@@ -27,7 +29,8 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-URL: https://github.com/debruine/glossary,
-    https://debruine.github.io/glossary/
-BugReports: https://github.com/debruine/glossary/issues
+URL: https://github.com/petzi53/glossary2,
+    https://github.com/debruine/glossary
+BugReports: https://github.com/petzi53/glossary2/issues
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.1.0
