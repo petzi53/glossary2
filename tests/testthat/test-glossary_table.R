@@ -26,7 +26,7 @@ test_that("psyteachr", {
   glossary("script")
 
   tbl <- glossary_table()
-  has_link <- grepl("<a href=\"https://psyteachr.github.io/glossary/s#script\" target=\"_blank\">script</a>", tbl)
+  has_link <- grepl("&lt;a href='https://psyteachr.github.io/glossary/s#script' target='_blank'&gt;script&lt;/a&gt;", tbl)
   expect_true(has_link)
 
   df <- glossary_table(FALSE)
