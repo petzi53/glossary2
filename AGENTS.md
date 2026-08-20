@@ -64,7 +64,8 @@ told otherwise (don't polish, document, or ship them).
 - ✅ Fixed DESCRIPTION metadata (fork status, authors, URLs)
 - ✅ Package check passes cleanly (0 errors/warnings/notes)
 - ✅ Set up independent GitHub Pages documentation via pkgdown
-- ✅ Created GitHub Actions workflow for auto-deployment
+- ✅ Created GitHub Actions workflow for auto-deployment to gh-pages
+- ✅ Configured custom domain deployment (matches pressfreedom.data pattern)
 - ✅ Integrated third-party glossary loading (glossary-pb example)
 - ✅ Extended project plan with Phases 5-7 (glossary integration, GitHub Pages, cross-linking)
 
@@ -78,11 +79,17 @@ told otherwise (don't polish, document, or ship them).
 7. ⏳ GitHub Release (v1.0.1) — pending manual creation
 8. ⏳ Contact DeBruine via GitHub issue — pending
 
-**NEXT STEPS:**
-- Enable GitHub Pages in repo settings (Settings → Pages → GitHub Actions)
-  Site will deploy to: https://petzi53.github.io/glossary2
-- Create GitHub release tag v1.0.1 with FORK_NOTES.md reference
-- Open GitHub issue on debruine/glossary repo (respectful outreach)
+**NEXT STEPS (2026-08-20):**
+1. Enable GitHub Pages in repo settings (Settings → Pages)
+   - Source: Deploy from a branch
+   - Branch: gh-pages
+   - Folder: / (root)
+   - Save
+2. Wait ~1-2 min for DNS propagation
+3. Test: https://www.peter-baumgartner.net/glossary2
+4. Create GitHub release tag v1.0.1 with FORK_NOTES.md reference
+5. Open GitHub issue on debruine/glossary repo (respectful outreach)
+6. Apply same workflow to glossary-pb repo
 
 ## Integration with glossary-pb
 
