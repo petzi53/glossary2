@@ -5,6 +5,11 @@
 
 <!-- badges: start -->
 
+[![codecov](https://codecov.io/gh/petzi53/glossary2/branch/main/graph/badge.svg)](https://codecov.io/gh/petzi53/glossary2)
+[![build
+status](https://github.com/petzi53/glossary2/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/petzi53/glossary2/actions)
+[![license: CC BY
+4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
 
 This is a community fork of
