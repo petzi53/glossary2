@@ -48,19 +48,24 @@ devtools::install_github("petzi53/glossary2")
 
 ## Example
 
-Click on the terms to see a popup definition.
+Click on the terms to see a popup definition:
 
-```{r, results='asis'}
+```r
 library(glossary2) 
 glossary_path("inst/glossary.yml")
 glossary_style("purple", "underline")
-```
 
-To calculate `r glossary("power")`, you need to know the intended sample size, expected `r glossary("effect size")` (e.g., `r glossary("SESOI")`), and `r glossary("alpha")` criterion.
+# Link terms to their definitions
+glossary("power")
+glossary("effect size")
+glossary("SESOI")
+glossary("alpha")
 
-```{r, echo = FALSE}
+# Display a table of all linked terms
 glossary_table()
 ```
+
+For a live interactive example, see the [package vignette](https://www.peter-baumgartner.net/glossary2/).
 
 ## Third-Party Glossaries
 
