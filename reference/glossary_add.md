@@ -37,7 +37,7 @@ NULL; Called for side effects
 # make a new glossary file
 path <- tempfile("glossary", fileext = ".yml")
 glossary_path(path, create = TRUE)
-#> /tmp/RtmpjZZ2nW/glossary195839036d2d.yml did not exist; it has been created
+#> /tmp/RtmpoIFoet/glossary18fe71f03a2d.yml did not exist; it has been created
 
 # add an entry for "joins"
 glossary_add("joins", "Ways to combine data from two tables")
