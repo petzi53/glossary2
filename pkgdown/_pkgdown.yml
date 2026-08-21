@@ -47,10 +47,10 @@ navbar:
   left:
     - text: Home
       href: index.html
+    - text: Getting Started
+      href: articles/glossary.html
     - text: Reference
       href: reference/index.html
-    - text: Articles
-      href: articles/index.html
     - text: "Fork Notes"
       href: articles/fork-notes.html
   
