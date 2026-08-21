@@ -218,8 +218,8 @@ methods for choosing an SESOI.
 
 ## Third-Party Glossaries
 
-You can load glossaries from external GitHub repositories. For example, to load
-Peter Baumgartner's personal glossary:
+You can load glossaries from external GitHub repositories. For example,
+to load Peter Baumgartner’s personal glossary:
 
 ``` r
 library(glossary2)
@@ -227,9 +227,11 @@ glossary_load_all("https://raw.githubusercontent.com/petzi53/glossary-pb/main/gl
 glossary_style("blue", "underline")
 ```
 
-See [glossary-pb](https://github.com/petzi53/glossary-pb) for more details.
+See [glossary-pb](https://github.com/petzi53/glossary-pb) for more
+details.
 
 ## More Information
 
-See the `vignette("glossary")` or [FORK_NOTES.md](FORK_NOTES.md) for
-more details.
+See the `vignette("glossary")`, the [full documentation
+site](https://www.peter-baumgartner.net/glossary2/), or
+[FORK_NOTES.md](FORK_NOTES.md) for more details.

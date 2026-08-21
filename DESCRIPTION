@@ -30,6 +30,7 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 URL: https://github.com/petzi53/glossary2,
+    https://www.peter-baumgartner.net/glossary2/,
     https://github.com/debruine/glossary
 BugReports: https://github.com/petzi53/glossary2/issues
 VignetteBuilder: knitr

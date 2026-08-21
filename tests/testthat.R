@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-library(glossary)
+library(glossary2)
 
-test_check("glossary")
+test_check("glossary2")

@@ -1,4 +1,4 @@
-path <- system.file("glossary.yml", package = "glossary")
+path <- system.file("glossary.yml", package = "glossary2")
 
 test_that("exists, default", {
   expect_type(glossary_load_all, "closure")
@@ -25,7 +25,7 @@ test_that("specify path", {
 
 test_that("pre-existing definition", {
   glossary_reset()
-  path <- system.file("glossary.yml", package = "glossary")
+  path <- system.file("glossary.yml", package = "glossary2")
   glossary_path(path)
   sink <- glossary("power", def = "TESTING")
 

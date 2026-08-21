@@ -8,7 +8,7 @@
 #' Since quarto books render each chapter in a separate environment, it is helpful to have a pre-chapter script that does any common setup. The code below will be added to a new or existing pre-chapter script, and this script sourced in the .Rprofile for this project to allow for a persistent glossary (this project .Rprofile will be run instead of your global .Rrofile). Set `script_path` to `FALSE` to handle this on your own.
 #'
 #' ```
-#' library(glossary)
+#' library(glossary2)
 #' glossary_path("glossary.yml")
 #' glossary_persistent(TRUE)
 #' ```
@@ -39,7 +39,7 @@ add_to_quarto <- function(quarto_dir = ".",
 
   # add or update helper files
   if (!file.exists(gpath)) {
-    yml <- system.file("glossary.yml", package = "glossary")
+    yml <- system.file("glossary.yml", package = "glossary2")
     file.copy(yml, gpath)
   }
 
@@ -71,7 +71,7 @@ format:
   if (!isFALSE(script_path)) {
     script_text <- paste0(
       "# glossary setup - persistent across chapters\n",
-      "library(glossary)\n",
+      "library(glossary2)\n",
       "glossary_path(\"", glossary_path, "\")\n",
       "glossary_persistent(TRUE)\n"
     )

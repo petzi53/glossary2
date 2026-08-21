@@ -1,7 +1,7 @@
 test_that("style", {
   expect_type(glossary_style, "closure")
 
-  path <- system.file("glossary.css", package = "glossary")
+  path <- system.file("glossary.css", package = "glossary2")
   css <- readLines(path)
 
   # inline (default)

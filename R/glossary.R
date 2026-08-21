@@ -22,7 +22,7 @@
 #'
 #' @examples
 #' # set glossary path to example file
-#' path <- system.file("glossary.yml", package = "glossary")
+#' path <- system.file("glossary.yml", package = "glossary2")
 #' glossary_path(path)
 #'
 #' glossary("alpha")
@@ -133,6 +133,7 @@ glossary <- function(term,
 #' @param gloss a named list(term = def)
 #'
 #' @return NULL; called for side effects
+#' @noRd
 glossary_add_to_table <- function(gloss) {
   tbl <- glossary_options("table")
   for (term in names(gloss)) {

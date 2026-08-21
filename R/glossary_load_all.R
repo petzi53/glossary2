@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' demo_glossary <- system.file("glossary.yml", package = "glossary")
+#' demo_glossary <- system.file("glossary.yml", package = "glossary2")
 #' glossary_load_all(demo_glossary)
 #'
 #' glossary_table(FALSE) # get table as a data frame

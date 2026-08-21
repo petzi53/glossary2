@@ -16,7 +16,7 @@ NULL; Called for side effects
 Load all the definitions in a glossary file, usually for subsequent display using \code{\link{glossary_table}}
 }
 \examples{
-demo_glossary <- system.file("glossary.yml", package = "glossary")
+demo_glossary <- system.file("glossary.yml", package = "glossary2")
 glossary_load_all(demo_glossary)
 
 glossary_table(FALSE) # get table as a data frame

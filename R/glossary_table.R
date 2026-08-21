@@ -28,9 +28,14 @@ glossary_table <- function(as_kable = TRUE) {
       glossary_path() == "psyteachr") {
     lcterm <- gsub(" ", "-", tolower(term), fixed = TRUE)
     first_letter <- substr(lcterm, 1, 1)
-    linked_term <- paste0("<a href='https://psyteachr.github.io/glossary/",
-                   first_letter, "#", lcterm, "' target='_blank'>",
-                   lcterm, "</a>")
+    url <- paste0("https://psyteachr.github.io/glossary/",
+                  first_letter, "#", lcterm)
+    # Use cell_spec to safely embed links with proper HTML quoting
+    linked_term <- kableExtra::cell_spec(
+      lcterm,
+      format = "html",
+      link = url
+    )
   }
 
   if (is.null(term)) {
@@ -38,11 +43,14 @@ glossary_table <- function(as_kable = TRUE) {
   } else if (as_kable) {
     the_list <- data.frame(
       term = linked_term,
-      definition = unlist(glossary)
+      definition = unlist(glossary),
+      stringsAsFactors = FALSE
     )
 
+    output_format <- if (is_latex()) "latex" else "html"
     k <- kableExtra::kable(the_list[order(term),],
                            escape = is_latex(),
+                           format = output_format,
                            row.names = FALSE)
     kableExtra::kable_styling(k)
   } else {
