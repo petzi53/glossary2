@@ -7,31 +7,28 @@ DeBruine's original design is elegant and thoughtfully crafted for adding intera
 
 ## Differences from Upstream
 
-### Critical Bug Fixes
-
-#### 1. **Term Matching: Exact Case-Insensitive Match**
+### Term Matching: Exact Case-Insensitive Lookup
 
 **Problem:** The original package used `grep(term, names(gloss), ignore.case = TRUE)` to look up 
-glossary terms. This approach performed **substring matching**, not exact matching. This caused 
-serious bugs where:
+glossary terms. This performed **substring matching**, causing serious bugs where:
 - Looking up "API" would incorrectly match "Capital income"
 - Looking up "alpha" would match "alpha (graphics)"
 - Any term could potentially match unintended entries
 
-**Solution:** Replaced substring grep matching with exact case-insensitive matching using:
+**Solution:** Replaced substring matching with exact case-insensitive matching. The key change in 
+`R/glossary.R` (lines 75–81):
 ```r
-tolower(trimws(term)) %in% tolower(trimws(names(gloss)))
+clean_term <- trimws(tolower(term))
+clean_names <- trimws(tolower(names(gloss)))
+index <- which(clean_term == clean_names)
+if (length(index)) term <- names(gloss)[index[[1]]]
 ```
 
-This ensures term lookup is case-insensitive but **exact**, eliminating false matches.
+This ensures term lookup is **exact** (no substring matches) while remaining **case-insensitive**.
 
-**Files affected:**
-- `R/glossary.R` — Main glossary lookup function
-- `inst/glossary.yml` — Added regression test terms ("API", "Capital income", etc.)
-- `tests/testthat/test-glossary.R` — Comprehensive test coverage for edge cases
-
-**Related upstream issue:** While no single issue in the original repo captured this, it was 
-flagged during fork development as a critical flaw in the matching logic.
+**Test coverage:**
+- `tests/testthat/test-glossary.R` includes regression tests for exact matching, case insensitivity, and edge cases
+- `inst/glossary.yml` includes terms designed to catch substring-matching bugs ("API" vs "Capital income", "alpha" vs "alpha (graphics)")
 
 ### Scope of Changes
 
