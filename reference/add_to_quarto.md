@@ -54,6 +54,6 @@ persistent glossary (this project .Rprofile will be run instead of your
 global .Rrofile). Set `script_path` to `FALSE` to handle this on your
 own.
 
-    library(glossary)
+    library(glossary2)
     glossary_path("glossary.yml")
     glossary_persistent(TRUE)

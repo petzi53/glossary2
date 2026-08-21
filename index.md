@@ -92,6 +92,8 @@ details.
 ## More Information
 
 See the
-[`vignette("glossary")`](https://debruine.github.io/glossary/articles/glossary.md)
-or [FORK_NOTES.md](https://debruine.github.io/glossary/FORK_NOTES.md)
+[`vignette("glossary")`](https://www.peter-baumgartner.net/glossary2/articles/glossary.md),
+the [full documentation
+site](https://www.peter-baumgartner.net/glossary2/), or
+[FORK_NOTES.md](https://www.peter-baumgartner.net/glossary2/FORK_NOTES.md)
 for more details.

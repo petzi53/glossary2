@@ -64,7 +64,7 @@ glossary("absolute path")
 ## Popup Type
 
 Set the popup type with
-[`glossary_popup()`](https://debruine.github.io/glossary/reference/glossary_popup.md);
+[`glossary_popup()`](https://www.peter-baumgartner.net/glossary2/reference/glossary_popup.md);
 options are “click” (default), “hover”, and “none”.
 
 ``` r
@@ -96,7 +96,7 @@ researcher before the data is analyzed.
 ## Style
 
 If your popup type is “click”, you must add a style with the
-[`glossary_style()`](https://debruine.github.io/glossary/reference/glossary_style.md)
+[`glossary_style()`](https://www.peter-baumgartner.net/glossary2/reference/glossary_style.md)
 function for the popups to work. If you set the popup type to “hover”,
 or “none”, you can omit this and the in-text glossary terms will be
 styled like other links in your document.
@@ -115,7 +115,7 @@ glossary_style(color = "purple",
 Alternatively, you can add your own CSS to your document (inline or in
 an external linked file) to create a more customised appearance. Just
 copy the text returned by the
-[`glossary_style()`](https://debruine.github.io/glossary/reference/glossary_style.md)
+[`glossary_style()`](https://www.peter-baumgartner.net/glossary2/reference/glossary_style.md)
 function and customise it.
 
 ``` r
@@ -165,7 +165,7 @@ There are a few ways to customise the glossary term display.
 
 Show the table of terms defined on this page (or since the last reset)
 with
-[`glossary_table()`](https://debruine.github.io/glossary/reference/glossary_table.md):
+[`glossary_table()`](https://www.peter-baumgartner.net/glossary2/reference/glossary_table.md):
 
 | term | definition |
 |:---|:---|
@@ -175,7 +175,7 @@ with
 | p-value | The probability of the observed data, or more extreme data, if the null hypothesis is true. The lower the p-value, the higher the test statistic, and less likely it is to observe the data if the null hypothesis is true. |
 
 You can reset the glossary table between sections with
-[`glossary_reset()`](https://debruine.github.io/glossary/reference/glossary_reset.md).
+[`glossary_reset()`](https://www.peter-baumgartner.net/glossary2/reference/glossary_reset.md).
 
 ## Quarto Books
 
@@ -184,7 +184,7 @@ will need to load the glossary package for each chapter, and do any
 setup.
 
 The function
-[`add_to_quarto()`](https://debruine.github.io/glossary/reference/add_to_quarto.md)
+[`add_to_quarto()`](https://www.peter-baumgartner.net/glossary2/reference/add_to_quarto.md)
 will set this up for you (this function is still experimental, so make
 sure you’ve committed a version of your project before using). If your
 working directory is the quarto project, run the following code to set
@@ -228,5 +228,5 @@ glossary_persistent(TRUE)
 
 Now, when you display the glossary table, it will show all items added
 since the last call to
-[`glossary_reset()`](https://debruine.github.io/glossary/reference/glossary_reset.md)
+[`glossary_reset()`](https://www.peter-baumgartner.net/glossary2/reference/glossary_reset.md)
 in the project.

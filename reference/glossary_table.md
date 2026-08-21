@@ -1,9 +1,9 @@
 # Display glossary table
 
 All terms defined with
-[`glossary`](https://debruine.github.io/glossary/reference/glossary.md)
+[`glossary`](https://www.peter-baumgartner.net/glossary2/reference/glossary.md)
 (since the last call to
-[`glossary_reset`](https://debruine.github.io/glossary/reference/glossary_reset.md))
+[`glossary_reset`](https://www.peter-baumgartner.net/glossary2/reference/glossary_reset.md))
 are added to a list, which this function displays using kable (or
 outputs as a data frame).
 
