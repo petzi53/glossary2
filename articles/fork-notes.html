@@ -79,33 +79,30 @@ fork addresses a critical bug in term matching.</p>
 <h3 id="differences-from-upstream">Differences from Upstream<a class="anchor" aria-label="anchor" href="#differences-from-upstream"></a>
 </h3>
 <div class="section level4">
-<h4 id="critical-bug-fixes">Critical Bug Fixes<a class="anchor" aria-label="anchor" href="#critical-bug-fixes"></a>
+<h4 id="term-matching-exact-case-insensitive-lookup">Term Matching: Exact Case-Insensitive Lookup<a class="anchor" aria-label="anchor" href="#term-matching-exact-case-insensitive-lookup"></a>
 </h4>
-<div class="section level5">
-<h5 id="term-matching-exact-case-insensitive-match">1. <strong>Term Matching: Exact Case-Insensitive Match</strong><a class="anchor" aria-label="anchor" href="#term-matching-exact-case-insensitive-match"></a>
-</h5>
 <p><strong>Problem:</strong> The original package used
 <code>grep(term, names(gloss), ignore.case = TRUE)</code> to look up
-glossary terms. This approach performed <strong>substring
-matching</strong>, not exact matching. This caused serious bugs where: -
-Looking up “API” would incorrectly match “Capital income” - Looking up
-“alpha” would match “alpha (graphics)” - Any term could potentially
-match unintended entries</p>
-<p><strong>Solution:</strong> Replaced substring grep matching with
-exact case-insensitive matching using:</p>
+glossary terms. This performed <strong>substring matching</strong>,
+causing serious bugs where: - Looking up “API” would incorrectly match
+“Capital income” - Looking up “alpha” would match “alpha (graphics)” -
+Any term could potentially match unintended entries</p>
+<p><strong>Solution:</strong> Replaced substring matching with exact
+case-insensitive matching. The key change in <code>R/glossary.R</code>
+(lines 75–81):</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">tolower</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/trimws.html" class="external-link">trimws</a></span><span class="op">(</span><span class="va">term</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">tolower</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/trimws.html" class="external-link">trimws</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">gloss</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>This ensures term lookup is case-insensitive but
-<strong>exact</strong>, eliminating false matches.</p>
-<p><strong>Files affected:</strong> - <code>R/glossary.R</code> — Main
-glossary lookup function - <code>inst/glossary.yml</code> — Added
-regression test terms (“API”, “Capital income”, etc.) -
-<code>tests/testthat/test-glossary.R</code> — Comprehensive test
-coverage for edge cases</p>
-<p><strong>Related upstream issue:</strong> While no single issue in the
-original repo captured this, it was flagged during fork development as a
-critical flaw in the matching logic.</p>
-</div>
+<code class="sourceCode R"><span><span class="va">clean_term</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/trimws.html" class="external-link">trimws</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">tolower</a></span><span class="op">(</span><span class="va">term</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">clean_names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/trimws.html" class="external-link">trimws</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/chartr.html" class="external-link">tolower</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">gloss</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">index</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">clean_term</span> <span class="op">==</span> <span class="va">clean_names</span><span class="op">)</span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">index</span><span class="op">)</span><span class="op">)</span> <span class="va">term</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">gloss</span><span class="op">)</span><span class="op">[</span><span class="va">index</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span><span class="op">]</span></span></code></pre></div>
+<p>This ensures term lookup is <strong>exact</strong> (no substring
+matches) while remaining <strong>case-insensitive</strong>.</p>
+<p><strong>Test coverage:</strong> -
+<code>tests/testthat/test-glossary.R</code> includes regression tests
+for exact matching, case insensitivity, and edge cases -
+<code>inst/glossary.yml</code> includes terms designed to catch
+substring-matching bugs (“API” vs “Capital income”, “alpha” vs “alpha
+(graphics)”)</p>
 </div>
 <div class="section level4">
 <h4 id="scope-of-changes">Scope of Changes<a class="anchor" aria-label="anchor" href="#scope-of-changes"></a>
@@ -145,8 +142,8 @@ DeBruine’s original design.</p>
 </tr>
 <tr class="even">
 <td>Maintained by</td>
-<td>Lisa DeBruine (inactive)</td>
-<td>Peter Baumgartner (community, best-effort)</td>
+<td>Lisa DeBruine</td>
+<td>Peter Baumgartner</td>
 </tr>
 </tbody>
 </table>
