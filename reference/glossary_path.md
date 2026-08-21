@@ -30,7 +30,7 @@ path <- glossary_path() # get current path
 # create (if doesn't exist) and set path
 newpath <- tempfile("glossary", fileext = ".yml")
 glossary_path(newpath, create = TRUE)
-#> /tmp/RtmpnhbecZ/glossary195b4bf030fd.yml did not exist; it has been created
+#> /tmp/RtmpdUhhOo/glossary18af62a35bb5.yml did not exist; it has been created
 
 # set path (assumes file exists)
 glossary_path(path)
