@@ -47,32 +47,26 @@ devtools::install_github("petzi53/glossary2")
 
 ## Example
 
-Click on the terms to see a popup definition.
+Click on the terms to see a popup definition:
 
 ``` r
 
 library(glossary2) 
 glossary_path("inst/glossary.yml")
 glossary_style("purple", "underline")
+
+# Link terms to their definitions
+glossary("power")
+glossary("effect size")
+glossary("SESOI")
+glossary("alpha")
+
+# Display a table of all linked terms
+glossary_table()
 ```
 
-To calculate powerThe probability of rejecting the null hypothesis when
-it is false, for a specific analysis, effect size, sample size, and
-criteria for significance., you need to know the intended sample size,
-expected effect size‘quantitative reflection of the magnitude of some
-phenomenon that is used for the purpose of addressing a question of
-interest’ (Kelley & Preacher, 2012) (e.g., SESOISmallest Effect Size of
-Interest: the smallest effect that is theoretically or practically
-meaningful \| See Equivalence Testing for Psychological Research for a
-tutorial on methods for choosing an SESOI.), and alphaThe threshold
-chosen in Neyman-Pearson hypothesis testing to distinguish test results
-that lead to the decision to reject the null hypothesis, or not, based
-on the desired upper bound of the Type 1 error rate. An alpha level of
-5% is most commonly used, but other alpha levels can be used as long as
-they are determined and preregistered by the researcher before the data
-is analyzed. criterion.
-
-[TABLE]
+For a live interactive example, see the [package
+vignette](https://www.peter-baumgartner.net/glossary2/).
 
 ## Third-Party Glossaries
 
