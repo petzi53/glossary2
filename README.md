@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![codecov](https://codecov.io/gh/petzi53/glossary2/branch/main/graph/badge.svg)](https://codecov.io/gh/petzi53/glossary2)
+[![codecov](https://codecov.io/gh/petzi53/glossary2/graph/badge.svg?token=1NVOIQL003)](https://codecov.io/gh/petzi53/glossary2)
 [![build
 status](https://github.com/petzi53/glossary2/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/petzi53/glossary2/actions)
 [![license: CC BY
