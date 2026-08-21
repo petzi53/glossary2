@@ -9,7 +9,9 @@ on:
     types: [published]
   workflow_dispatch:
 
-name: pkgdown
+name: pkgdown.yaml
+
+permissions: read-all
 
 jobs:
   pkgdown:
@@ -22,13 +24,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-r@v2
-        with:
-          use-public-rspm: true
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
@@ -39,9 +39,17 @@ jobs:
         run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE)
         shell: Rscript {0}
 
-      - name: Deploy to gh-pages
+      - name: Remove internal AGENTS.md page
+        # pkgdown has no config option to exclude root .md files from the
+        # home page (only README/LICENSE/NEWS are hard-coded exceptions), so
+        # AGENTS.md (Peter's internal memory file) gets auto-rendered. Strip
+        # it from the built site before deploying.
+        run: rm -f docs/AGENTS.html docs/AGENTS.md
+
+      - name: Deploy to GitHub pages 🚀
         if: github.event_name != 'pull_request'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          clean: false
+          branch: gh-pages
+          folder: docs
