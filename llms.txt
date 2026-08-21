@@ -1,30 +1,24 @@
-# glossary2: Community-Maintained Fork
+# glossary2: Community Fork
 
-A maintained fork of the excellent
-[glossary](https://github.com/debruine/glossary) package by [Lisa
-DeBruine](https://github.com/debruine).
+This is a community fork of
+[glossary](https://github.com/debruine/glossary), an excellent R package
+by [Lisa DeBruine](https://github.com/debruine) for adding interactive
+glossaries to Markdown and Quarto documents.
 
 ## About This Fork
 
-The original `glossary` package is no longer actively maintained by Lisa
-DeBruine (no updates since 2023). This fork maintains the package with:
+Building on Lisa DeBruine’s original design, this fork includes:
 
-- **Critical bugfix:** Exact case-insensitive term matching (fixes
-  substring-matching bugs where “API” would incorrectly match “Capital
+- **Bug fixes:** Exact case-insensitive term matching (fixes
+  substring-matching issues where “API” could incorrectly match “Capital
   income”)
-- **Enhanced functionality:** Improved term lookup and edge case
-  handling
-- **Community support:** Best-effort maintenance and issue responses
+- **Enhanced robustness:** Improved term lookup and edge case handling
 
-**Attribution:** This is a fork of Lisa DeBruine’s work. The original
-package remains licensed under CC BY 4.0, and DeBruine is credited as
-the original author in all distributions.
-
-**Maintenance note:** This is a community fork maintained on a
-best-effort basis. While issues and PRs are welcome, response times may
-vary due to time constraints. If you need urgent support or want to
-contribute significantly, please consider the original repository or
-reach out via issues.
+**Attribution & License:** This work builds on DeBruine’s original
+package, licensed under CC BY 4.0. DeBruine remains credited as the
+original author in all distributions. See
+[FORK_NOTES](https://www.peter-baumgartner.net/glossary2/FORK_NOTES.md)
+for details on what’s changed.
 
 ## What is glossary?
 
@@ -136,3 +130,8 @@ Set up persistent glossaries in Quarto documents
 ### Getting Started
 
 - [glossary](https://www.peter-baumgartner.net/glossary2/articles/glossary.md):
+
+### Project Info
+
+- [Fork Notes: Development and Design
+  Decisions](https://www.peter-baumgartner.net/glossary2/articles/fork-notes.md):

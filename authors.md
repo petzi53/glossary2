@@ -14,11 +14,11 @@ Source:
 [`DESCRIPTION`](https://github.com/petzi53/glossary2/blob/master/DESCRIPTION)
 
 DeBruine L (2026). *glossary2: Glossaries for Markdown and Quarto
-Documents (Community-Maintained Fork)*. R package version 1.0.1,
+Documents (fork)*. R package version 1.0.1,
 <https://github.com/petzi53/glossary2>.
 
     @Manual{,
-      title = {glossary2: Glossaries for Markdown and Quarto Documents (Community-Maintained Fork)},
+      title = {glossary2: Glossaries for Markdown and Quarto Documents (fork)},
       author = {Lisa DeBruine},
       year = {2026},
       note = {R package version 1.0.1},
