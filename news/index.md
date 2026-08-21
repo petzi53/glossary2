@@ -2,13 +2,12 @@
 
 ## glossary2 (development version)
 
-### Version 1.0.1 — Community Maintenance Fork
+### Version 1.0.1 — Community Fork
 
-This is the first release of **glossary2**, a community-maintained fork
-of Lisa DeBruine’s [glossary](https://github.com/debruine/glossary)
-package. The original package is no longer actively maintained, but
-remains an excellent solution for adding glossaries to Quarto and R
-Markdown documents.
+This is the first release of **glossary2**, a fork of Lisa DeBruine’s
+[glossary](https://github.com/debruine/glossary) package. The original
+package is no longer actively maintained, but remains an excellent
+solution for adding glossaries to Quarto and R Markdown documents.
 
 **Original author:** Lisa DeBruine (<https://github.com/debruine>)  
 **Current maintainer:** Peter Baumgartner (community, best-effort
