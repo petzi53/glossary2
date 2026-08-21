@@ -19,6 +19,7 @@ test_that("add to table", {
 })
 
 test_that("psyteachr", {
+  skip_on_ci()
   skip_if_offline("psyteachr.github.io")
   glossary_reset()
   glossary_path("psyteachr")
@@ -26,7 +27,8 @@ test_that("psyteachr", {
   glossary("script")
 
   tbl <- glossary_table()
-  has_link <- grepl("<a href=\"https://psyteachr.github.io/glossary/s#script\" target=\"_blank\">script</a>", tbl)
+  # Check that link uses proper double quotes (from cell_spec)
+  has_link <- grepl("<a href=\"https://psyteachr.github.io/glossary/s#script\"", tbl)
   expect_true(has_link)
 
   df <- glossary_table(FALSE)

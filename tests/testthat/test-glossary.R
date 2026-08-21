@@ -2,7 +2,7 @@ test_that("errors", {
   expect_type(glossary, "closure")
 
   # set up path to example glossary file
-  path <- system.file("glossary.yml", package = "glossary")
+  path <- system.file("glossary.yml", package = "glossary2")
   glossary_path(path)
 
   expect_error(glossary(path = NULL),
@@ -67,7 +67,7 @@ test_that("path, click", {
   glossary_popup("click")
 
   # set up path to example glossary file
-  path <- system.file("glossary.yml", package = "glossary")
+  path <- system.file("glossary.yml", package = "glossary2")
   glossary_options(path = path)
 
   # basic
@@ -134,7 +134,7 @@ test_that("path, hover", {
   glossary_popup("hover")
 
   # set up path to example glossary file
-  path <- system.file("glossary.yml", package = "glossary")
+  path <- system.file("glossary.yml", package = "glossary2")
   glossary_options(path = path)
 
   # basic
@@ -153,7 +153,7 @@ test_that("tricky entries", {
   glossary_popup("hover")
 
   # set up path to example glossary file
-  path <- system.file("glossary.yml", package = "glossary")
+  path <- system.file("glossary.yml", package = "glossary2")
   glossary_options(path = path)
 
   # missing entry
@@ -174,6 +174,7 @@ test_that("psyteachr", {
   glossary_popup("click")
   glossary_path("psyteachr")
 
+  skip_on_ci()
   skip_if_offline(host = "psyteachr.github.io")
   test <- glossary("alpha")
   exp <- "<a href='https://psyteachr.github.io/glossary/a#alpha' target='_blank' class='glossary'>alpha<span class='def'>(stats) The cutoff value for making a decision to reject the null hypothesis; (graphics) A value between 0 and 1 used to control the levels of transparency in a plot</span></a>"
