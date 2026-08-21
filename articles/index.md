@@ -6,5 +6,5 @@
 
 ### Project Info
 
-- [Fork Notes: Development and Design
-  Decisions](https://www.peter-baumgartner.net/glossary2/articles/fork-notes.md):
+- [Fork
+  Notes](https://www.peter-baumgartner.net/glossary2/articles/fork-notes.md):
