@@ -11,7 +11,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/petzi53/glossary2/blob/master/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/petzi53/glossary2/blob/v1.0.1/DESCRIPTION)
 
 DeBruine L (2026). *glossary2: Glossaries for Markdown and Quarto
 Documents (fork)*. R package version 1.0.1,
