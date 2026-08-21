@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 # glossary2: Community Fork <a href="https://github.com/petzi53/glossary2"><img src="man/figures/logo.png" align="right" height="120" /></a>
 
 <!-- badges: start -->
-[![codecov](https://codecov.io/gh/petzi53/glossary2/branch/main/graph/badge.svg)](https://codecov.io/gh/petzi53/glossary2)
+[![codecov](https://codecov.io/gh/petzi53/glossary2/graph/badge.svg?token=1NVOIQL003)](https://codecov.io/gh/petzi53/glossary2)
 [![build status](https://github.com/petzi53/glossary2/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/petzi53/glossary2/actions)
 [![license: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->
