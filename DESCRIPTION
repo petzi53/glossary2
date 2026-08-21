@@ -1,5 +1,5 @@
 Package: glossary2
-Title: Glossaries for Markdown and Quarto Documents (Community-Maintained Fork)
+Title: Glossaries for Markdown and Quarto Documents (fork)
 Date: 2026-08-20
 Version: 1.0.1
 Authors@R: c(
@@ -10,10 +10,9 @@ Authors@R: c(
            email = "petzi53@gmail.com",
            comment = c(ORCID = "0000-0003-4526-8791"))
     )
-Description: Add glossaries to markdown and quarto documents by tagging individual
-    words. Definitions can be provided inline or in a separate file. This is a
-    community-maintained fork of the original glossary package with bug fixes and
-    enhancements.
+Description: Add interactive glossaries to markdown and quarto documents by tagging individual
+    words. Definitions can be provided inline or in a separate file. This fork extends
+    Lisa DeBruine's original glossary package with bug fixes and continued maintenance.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

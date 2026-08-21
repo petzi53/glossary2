@@ -10,7 +10,7 @@ template:
   
 home:
   title: glossary2 — Glossaries for Quarto & Markdown
-  description: A community-maintained fork with bug fixes and enhancements
+  description: A community fork extending Lisa DeBruine's glossary package with bug fixes and ongoing support
 
 reference:
   - title: "Main Functions"
@@ -52,7 +52,7 @@ navbar:
     - text: Articles
       href: articles/index.html
     - text: "Fork Notes"
-      href: "https://github.com/petzi53/glossary2/blob/main/FORK_NOTES.md"
+      href: articles/fork-notes.html
   
   right:
     - icon: fa-github
@@ -67,6 +67,11 @@ articles:
     navbar: ~
     contents:
       - glossary
+  
+  - title: "Project Info"
+    navbar: ~
+    contents:
+      - fork-notes
 
 footer:
   structure:
