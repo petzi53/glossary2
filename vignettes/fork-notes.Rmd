@@ -1,5 +1,5 @@
 ---
-title: "Fork Notes: Development and Design Decisions"
+title: "Fork Notes"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Fork Notes}
