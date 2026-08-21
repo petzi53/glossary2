@@ -12,7 +12,7 @@ Authors@R: c(
     )
 Description: Add interactive glossaries to markdown and quarto documents by tagging individual
     words. Definitions can be provided inline or in a separate file. This fork extends
-    Lisa DeBruine's original glossary package with bug fixes and continued maintenance.
+    Lisa DeBruine's original glossary package with bug fixes.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
